@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Survey</title>
+    <style>
+      .header {
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+      .header img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .submit input[type='submit'] {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2000px-Mercedes-Logo.svg.png"
+        alt="Mercedes Logo"
+      />
+      <h1>Customer Survey</h1>
+    </div>
+    <br />
+    <form action="/submit" method="post">
+      <h2>Basic Information</h2>
+      <label for="name"><strong>1. 이름:</strong></label
+      ><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="age"><strong>2. 나이대:</strong></label
+      ><br />
+      <select id="age" name="age" required>
+        <option value="10s">10대</option>
+        <option value="20s">20대</option>
+        <option value="30s">30대</option>
+        <option value="40s">40대</option>
+        <option value="50s">50대</option>
+        <option value="60s">60대 이상</option></select
+      ><br /><br />
+
+      <label for="phone"><strong> 3. 휴대폰 번호:</strong></label
+      ><br />
+      <select id="phone-prefix" name="phone-prefix">
+        <option value="010" selected>010</option>
+        <option value="011">011</option>
+        <option value="016">016</option>
+        <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
+      </select>
+      <input
+        type="text"
+        id="phone-middle"
+        name="phone-middle"
+        maxlength="4"
+        size="4"
+        required
+      />
+      <input
+        type="text"
+        id="phone-last"
+        name="phone-last"
+        maxlength="4"
+        size="4"
+        required
+      /><br /><br />
+
+      <br />
+      <h2>Customer Experience</h2>
+      <label for="satisfaction"
+        ><b
+          >본 메르세데스 벤츠 서비스 만족도에 대해 어떻게 생각하시나요?:</b
+        ></label
+      ><br /><br />
+      <input
+        type="radio"
+        id="very_satisfied"
+        name="satisfaction"
+        value="Very Satisfied"
+        required
+      />
+      <label for="very_satisfied">매우만족</label><br />
+      <input
+        type="radio"
+        id="satisfied"
+        name="satisfaction"
+        value="Satisfied"
+      />
+      <label for="satisfied">만족</label><br />
+      <input
+        type="radio"
+        id="dissatisfied"
+        name="satisfaction"
+        value="Dissatisfied"
+      />
+      <label for="dissatisfied">불만족</label><br />
+      <input
+        type="radio"
+        id="very_dissatisfied"
+        name="satisfaction"
+        value="Very Dissatisfied"
+      />
+      <label for="very_dissatisfied">매우불만족</label><br /><br />
+
+      <div class="submit">
+        <input type="submit" value="제출하기" />
+      </div>
+    </form>
+  </body>
+</html>
